@@ -90,13 +90,13 @@ export const projects = [
     github: "https://github.com/Harsh2463/Cafeteria-Website-landing-page",
   },
   {
-    title: "Food reel app",
-    desc: "This MERN-stack Zomato clone is a food-centric social platform featuring a login system, registration, and personalized 'food reels' for users.",
-    stack: ["React", "Node.js", "MongoDB", "Express"],
-    color: "linear-gradient(135deg,#fa709a,#fee140)",
-    emoji: "📋",
-    live: "https://zomato-mern-frontend.vercel.app/",
-    github: "https://github.com/Harsh2463/ZOMATO-MERN-PROJECT",
+    title: "Clothes E-commerce Website",
+    desc: "SCloser is an e-commerce platform selling casual streetwear like T-shirts and Hoodies for men and women.",
+    stack: ["HTML/CSS", "PHP", "Mysql", "Javascript"],
+    color: "linear-gradient(135deg,#4facfe,#00f2fe)",
+    emoji: "📝",
+    live: "https://scloser.kesug.com/",
+    github: "https://github.com/Harsh2463",
   },
   {
     title: "Sketch Artist Website",
@@ -115,6 +115,15 @@ export const projects = [
     emoji: "📝",
     live: "https://sky-group.netlify.app/",
     github: "https://github.com/Harsh2463",
+  },
+  {
+    title: "Food reel app",
+    desc: "This MERN-stack Zomato clone is a food-centric social platform featuring a login system, registration, and personalized 'food reels' for users.",
+    stack: ["React", "Node.js", "MongoDB", "Express"],
+    color: "linear-gradient(135deg,#fa709a,#fee140)",
+    emoji: "📋",
+    live: "https://zomato-mern-frontend.vercel.app/",
+    github: "https://github.com/Harsh2463/ZOMATO-MERN-PROJECT",
   },
 ];
 
