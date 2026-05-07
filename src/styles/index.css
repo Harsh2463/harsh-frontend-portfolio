@@ -487,6 +487,10 @@ body {
   .stats-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  .toast {
+    right: initial;
+    margin: 0 5%;
+  }
 }
 
 @media (max-width: 767px) {

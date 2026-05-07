@@ -51,10 +51,16 @@ const Contact = () => {
     setTimeout(() => {
       const { name, email, message } = form;
 
-      const text = `New Message:
-      Name: ${name}
-      Email: ${email}
-      Message: ${message}`;
+      const text = `👋 *New Portfolio Inquiry*
+
+👤 *Name:* ${name}
+📧 *Email:* ${email}
+
+💬 *Message:*
+${message}
+
+Sent from your portfolio website,
+🚀 Please reply to this message to continue the conversation.`;
 
       const url = `https://wa.me/917303413312?text=${encodeURIComponent(text)}`;
 
