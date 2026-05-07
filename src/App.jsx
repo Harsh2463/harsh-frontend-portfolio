@@ -37,7 +37,7 @@ const App = () => {
           <Contact />
           <Footer />
           <div id="toast" className="toast">
-            ✅ Message sent! I'll get back to you soon.
+            You’ll be redirected to WhatsApp to send your message...
           </div>
         </>
       )}

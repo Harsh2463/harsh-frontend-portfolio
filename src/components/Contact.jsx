@@ -42,16 +42,28 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault ? e.preventDefault() : null;
+    e.preventDefault();
     setLoading(true);
+
+    const toast = document.getElementById("toast");
+    toast.classList.add("show");
+
     setTimeout(() => {
-      setLoading(false);
+      const { name, email, message } = form;
+
+      const text = `New Message:
+      Name: ${name}
+      Email: ${email}
+      Message: ${message}`;
+
+      const url = `https://wa.me/917303413312?text=${encodeURIComponent(text)}`;
+
+      window.open(url, "_blank");
+
+      toast.classList.remove("show");
       setForm({ name: "", email: "", message: "" });
-      const toast = document.getElementById("toast");
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 4000);
-    }, 1500);
-    console.log(form.name);
+      setLoading(false);
+    }, 800);
   };
 
   const infoCards = [
@@ -325,10 +337,10 @@ const Contact = () => {
                         animation: "spin 0.8s linear infinite",
                       }}
                     ></span>
-                    Sending...
+                    Opening Whatsapp...
                   </span>
                 ) : (
-                  "Send Message →"
+                  "Send Message on Whatsapp →"
                 )}
               </button>
             </div>
