@@ -529,3 +529,23 @@ body {
     transform: translateY(0px);
   }
 }
+
+/* blinking */
+.closed-eye {
+  opacity: 0;
+}
+
+.closed-eye {
+  animation: blink 4s infinite 0.8s;
+}
+
+@keyframes blink {
+  0%,
+  92%,
+  100% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 1;
+  }
+}

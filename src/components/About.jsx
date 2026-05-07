@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutImg from "../assets/png/me.png";
+import aboutImg2 from "../assets/png/me-close.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -180,6 +181,7 @@ export default function About() {
             }}
           >
             <div
+              className="avatar"
               style={{
                 width: "100%",
                 aspectRatio: "4/5",
@@ -196,9 +198,14 @@ export default function About() {
               }}
             >
               <img
-                className="h-full object-cover rounded-[28px]"
+                className="open-eye absolute h-full object-cover rounded-[28px]"
                 src={aboutImg}
-                alt=""
+                alt={aboutImg}
+              />
+              <img
+                className="closed-eye absolute h-full object-cover rounded-[28px]"
+                src={aboutImg2}
+                alt={aboutImg}
               />
 
               {FLOATING_BADGES.map((b, i) => {

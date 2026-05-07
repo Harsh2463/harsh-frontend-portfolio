@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // Cursor glow
   useEffect(() => {

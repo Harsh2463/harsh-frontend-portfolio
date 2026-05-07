@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "../data";
@@ -8,6 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
   const headingRef = useRef(null);
   const gridRef = useRef(null);
+
+  const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
     gsap.fromTo(
@@ -103,9 +105,23 @@ export default function Projects() {
             gap: "24px",
           }}
         >
-          {projects.map((p) => (
+          {projects.slice(0, visibleCount).map((p) => (
             <ProjectCard key={p.title} project={p} />
           ))}
+
+          <div className="text-center col-span-full">
+            <a
+              onClick={() => setVisibleCount((prev) => prev + 3)}
+              className={`btn-outline ${
+                visibleCount >= projects.length
+                  ? "opacity-50 pointer-events-none cursor-not-allowed"
+                  : ""
+              }`}
+              disabled
+            >
+              Load More ↓
+            </a>
+          </div>
         </div>
       </div>
     </section>
