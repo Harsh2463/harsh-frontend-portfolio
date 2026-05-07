@@ -205,8 +205,13 @@ function ProjectCard({ project: p }) {
             }}
             onClick={(e) => {
               if (window.innerWidth < 768) {
-                e.preventDefault();
-                alert("⚠️ This project is best viewed on desktop.");
+                const proceed = window.confirm(
+                  "⚠️ This project is best viewed on desktop.\n\nDo you want to continue anyway?",
+                );
+
+                if (!proceed) {
+                  e.preventDefault(); // cancel click
+                }
               }
             }}
           >
